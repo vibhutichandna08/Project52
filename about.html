@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>About Us</title>
+        <link rel = "stylesheet" href = "style.css" type = "text/css">
+    </head>
+
+
+    <body>
+        <h1 class = "header">Origami Designs</h1>
+        <h2 class = "aboutUsHead">About Us</h2>
+        <hr class = "line">
+        <div class = "dropdown">
+            <span> </span>
+            <a class = "link" href = "followus.html"><b>|  Follow Us |</b></a>
+            <span> </span>
+            <div class="dropdown-content">
+                <p>This link will take you to a website where you can follow us and see what we are working on.</p>
+            </div>
+        </div>
+
+        <div class = "dropdown">
+            <span> </span>
+            <a class = "link" href = "index.html"><b>| Home Page |</b></a>
+            <span> </span>
+            <div class="dropdown-content">
+                <p>This link will take you to my home page of the website.</p>
+            </div>
+        </div>
+        <hr class = "line">
+
+        <div class = "welcomeAbout">
+            <p>Welcome To My About Page</p>
+        </div>
+
+        <p class = "p2">Our company name is WhitehatJr.</p>
+        <p class = "p2">We teach kids how to code.</p>
+
+        <hr class = "line">
+    </body>
+
+    <!-- This Blocks right click and F12 and other stuff -->
+    <script language="JavaScript">
+      
+        window.onload = function () {
+            document.addEventListener("contextmenu", function (e) {
+                e.preventDefault();
+            }, false);
+
+            document.addEventListener("keydown", function (e) {
+                //document.onkeydown = function(e) {
+                // "I" key
+                if (e.ctrlKey && e.shiftKey && e.keyCode == 73) {
+                    disabledEvent(e);
+                }
+                // "J" key
+                if (e.ctrlKey && e.shiftKey && e.keyCode == 74) {
+                    disabledEvent(e);
+                }
+                // "S" key + macOS
+                if (e.keyCode == 83 && (navigator.platform.match("Mac") ? e.metaKey : e.ctrlKey)) {
+                    disabledEvent(e);
+                }
+                // "U" key
+                if (e.ctrlKey && e.keyCode == 85) {
+                    disabledEvent(e);
+                }
+                // "F12" key
+                if (event.keyCode == 123) {
+                    disabledEvent(e);
+                }
+            }, false);
+
+            function disabledEvent(e) {
+                if (e.stopPropagation) {
+                    e.stopPropagation();
+                } else if (window.event) {
+                    window.event.cancelBubble = true;
+                }
+                e.preventDefault();
+                return false;
+            }
+        }
+        //edit: removed ";" from last "}" because of javascript error
+    </script>
+</html>
